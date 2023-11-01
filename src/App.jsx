@@ -85,16 +85,16 @@ function App() {
     setResult(found);
   };
 
-  //콘솔에는 찍히는게 결과물,,,,
+  //콘솔에는 찍히는데 결과물,,,,
   const handleSome = function () {
     const some2 = array.some((el) => el.includes(query));
     console.log(some2);
   };
 
-  //어렵당,,
+  //결과물,,,
   const handleEvery = function () {
-    const every2 = array.every((el) => el.includes(query));
-    console.log(every2);
+    const every2 = array.every((el) => el.length > 2);
+    setResult(every2);
   };
 
   const handleSort = function () {
