@@ -73,7 +73,6 @@ function App() {
     setResult(indexof2);
   };
 
-  // 콘솔에는 찍히는데 결과물에 안나옴,,ㅠㅠ
   const handleIncludes = function () {
     const included = array.includes(query);
     setResult(included);
@@ -85,13 +84,11 @@ function App() {
     setResult(found);
   };
 
-  //콘솔에는 찍히는데 결과물,,,,
   const handleSome = function () {
     const some2 = array.some((el) => el.includes(query));
     setResult(some2);
   };
 
-  //결과물,,,
   const handleEvery = function () {
     const every2 = array.every((el) => el.length >= 2);
     setResult(every2);
@@ -141,7 +138,7 @@ function App() {
       </div>
       <div>
         <h3>결과물</h3>
-        <p>{result}</p>
+        <p>{result.toString()}</p>
       </div>
     </div>
   );
