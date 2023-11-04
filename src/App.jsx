@@ -81,7 +81,7 @@ function App() {
   const handleFind = function () {
     const found = array.find((item, index) => item.includes(query));
 
-    setResult(found);
+    setResult(found || "Not Found");
   };
 
   const handleSome = function () {
@@ -90,12 +90,12 @@ function App() {
   };
 
   const handleEvery = function () {
-    const every2 = array.every((el) => el.length >= 2);
+    const every2 = array.every((el) => el.length > 2);
     setResult(every2);
   };
 
   const handleSort = function () {
-    const sorted = array.sort();
+    const sorted = [...array].sort();
     setArray(sorted);
     setResult(sorted.join(","));
   };
